@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "bmi-calculator": {
+      "command": "python",
+      "args": [
+        "${workspaceRoot}/bmi_calculator/bmi_mcp_server.py"
+      ],
+      "name": "BMI Calculator MCP Server"
+    }
+  }
+}
