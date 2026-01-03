@@ -15,11 +15,14 @@ The BMI (Body Mass Index) Calculator is a simple example of an MCP service that:
 1. Calculates BMI based on height and weight
 2. Categorizes BMI values into health categories
 3. Provides comprehensive health assessments
+4. Offers a greeting API endpoint with customizable name parameter
 
 #### Files:
 
 - `bmi_calculator/bmi_mcp_server.py` - The MCP server implementation
 - `bmi_calculator/bmi_mcp_client.py` - A demo client showing how to use the server
+- `bmi_calculator/greet_demo.py` - Demo client for the greeting API
+- `bmi_calculator/test_greet.py` - Unit tests for the greeting API
 - `bmi_calculator/requirements.txt` - Required dependencies
 
 #### Setup and Usage:
@@ -34,10 +37,27 @@ The BMI (Body Mass Index) Calculator is a simple example of an MCP service that:
    python bmi_calculator/bmi_mcp_server.py
    ```
 
-3. In a separate terminal, run the client demo:
+3. In a separate terminal, run the client demos:
    ```
    python bmi_calculator/bmi_mcp_client.py
+   python bmi_calculator/greet_demo.py
    ```
+
+4. Run the unit tests:
+   ```
+   python bmi_calculator/test_greet.py
+   ```
+
+#### Available API Endpoints:
+
+1. **calculate_bmi** - Calculate BMI from height and weight
+2. **get_bmi_category** - Get BMI category from a BMI value
+3. **bmi_assessment** - Get comprehensive BMI assessment
+4. **greet** - Return a greeting message with customizable name
+   - Parameters:
+     - `name` (optional, default: "World"): The name to greet
+   - Returns: `{"message": "Hello, {name}!", "name": "{name}"}`
+   - Error handling: Returns error for empty or non-string names
 
 #### MCP Configuration:
 
